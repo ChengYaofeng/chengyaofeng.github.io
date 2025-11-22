@@ -22,7 +22,7 @@ You can find more about his research interests and ongoing projects on his [GitH
 
 IEEE Transactions on Systems, Man, and Cybernetics: Systems, 2025.11.12
 
-### [A2G: Leveraging Intuitive Physics for Force-Efficient Robotic Grasping](https://ieeexplore.ieee.org/document/11242157)
+### [A2G: Leveraging Intuitive Physics for Force-Efficient Robotic Grasping](https://ieeexplore.ieee.org/abstract/document/10531637)
 
 **Yaofeng Cheng**, Shengkai Liu, Fusheng Zha*, Wei Guo, Haoyu Du, Pengfei Wang, Zhenshan Bing
 
