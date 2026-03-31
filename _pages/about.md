@@ -32,7 +32,7 @@ IEEE Robotics and Automation Letters, 2024.5.16
 
 **Yaofeng Cheng**, Xinkai Gao, Sen Zhang, Chao Zeng, Fusheng Zha, Lining Sun, Chenguang Yang
 
-Arxiv, 2025.8.4
+IEEE Robotics and Automation Letters, 2026.3.13
 
 ### [Learning effective pruning at initialization from iterative pruning](https://arxiv.org/abs/2408.14757)
 
