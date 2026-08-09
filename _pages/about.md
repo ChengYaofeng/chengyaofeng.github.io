@@ -8,9 +8,9 @@ redirect_from:
 ---
 # Biography
 
-Yaofeng Cheng is a Ph.D. candidate in the School of Mechatronics Engineering at Harbin Institute of Technology and the State Key Laboratory of Robotics. He received his B.Eng. degree from the School of Mechatronics Engineering at Wuhan University of Technology. He was sponsored by the China Scholarship Council (CSC) to conduct a one-year research exchange at the University of Liverpool in the United Kingdom.
+Yaofeng Cheng is currently a researcher at the Zhejiang Humanoid Robot Innovation Center and a postdoctoral researcher at Zhejiang University. He received his Ph.D. degree from the School of Mechatronics Engineering at Harbin Institute of Technology, where he conducted research at the State Key Laboratory of Robotics and System. He received his B.Eng. degree from the School of Mechatronics Engineering at Wuhan University of Technology. During his Ph.D. studies, he was sponsored by the China Scholarship Council (CSC) to conduct a one-year research exchange at the University of Liverpool, United Kingdom.
 
-His research focuses on transparent object perception and robotic manipulation, including depth recovery for transparent objects, point-cloud–based 3D shape estimation, 6-DoF grasp generation guided by spatial geometry, and task-oriented grasping. He has also worked on neural network model pruning. His current research interests include transparent object manipulation, sparse algorithms for large models, and vision-language-action (VLA) systems.
+His research focuses on transparent object perception and robotic manipulation, including depth recovery for transparent objects, point-cloud–based 3D shape estimation, 6-DoF grasp generation guided by spatial geometry, and task-oriented grasping. He has also worked on neural network model pruning. His current research interests include transparent sensing, robotic manipulation and machine learning.
 
 You can find more about his research interests and ongoing projects on his [GitHub page](https://github.com/ChengYaofeng).
 
@@ -42,6 +42,7 @@ Arxiv, 2024.8.27
 
 # Personal Education
 
-+ Ph.D. in Mechatronics Engineering, Harbin Institute of Technology, China, *2020 – Present*
-+ Joint Ph.D. Training Program, University of Liverpool, United Kingdom, *2024 – 2025*
-+ B.S. in Mechatronics Engineering , Wuhan University of Technology, China, *2016 – 2020*
+* Postdoctoral Researcher, Zhejiang University, China, *2026 – Present*, Supervisor: Yue Wang
+* Ph.D. in Mechatronics Engineering, Harbin Institute of Technology, China,  *2020 – 2026* , Supervisor: Fusheng Zha
+* Joint Ph.D. Training Program, University of Liverpool, United Kingdom,  *2024 – 2025* , Supervisor: Chenguang Yang
+* B.Eng. in Mechatronics Engineering, Wuhan University of Technology, China, *2016 – 2020*
