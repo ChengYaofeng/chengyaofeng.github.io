@@ -1,0 +1,18 @@
+{% assign publication = include.paper %}
+<article class="publication-card">
+  <div class="publication-card__meta">
+    {% if publication.short_title %}<span class="publication-card__label">{{ publication.short_title }}</span>{% endif %}
+    <span>{{ publication.venue }} · {{ publication.date | date: '%Y' }}</span>
+  </div>
+  <h3><a href="{{ publication.url | relative_url }}">{{ publication.title }}</a></h3>
+  <div class="publication-card__authors">{{ publication.authors | markdownify }}</div>
+  {% if publication.author_note %}<p class="publication-card__note">{{ publication.author_note }}</p>{% endif %}
+  <p class="publication-card__summary">{{ publication.excerpt | strip_html }}</p>
+  {% include publication-links.html paper=publication %}
+  {% if publication.citation and publication.citation != '' %}
+  <details class="publication-citation">
+    <summary>Citation</summary>
+    <p>{{ publication.citation }}</p>
+  </details>
+  {% endif %}
+</article>

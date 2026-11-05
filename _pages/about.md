@@ -1,48 +1,51 @@
 ---
 permalink: /
-title: ""
+title: "Yaofeng Cheng"
+description: "Yaofeng Cheng (程耀锋) studies transparent object perception, 3D vision and robotic manipulation. Engineer at Zhejiang Humanoid Robot Innovation Center and postdoctoral researcher at Zhejiang University."
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
-# Biography
+<div class="intro">
+  <p class="intro__eyebrow">Robotics · 3D Vision · Machine Learning</p>
+  <p class="intro__lead">I work on helping robots perceive and manipulate the physical world, with a focus on transparent objects and geometry-aware grasping.</p>
+  <p>I am an engineer at the <strong>Zhejiang Humanoid Robot Innovation Center</strong> and a postdoctoral researcher at <strong>Zhejiang University</strong>. My research connects transparent object perception, 3D shape estimation and task-oriented robotic manipulation.</p>
+  <div class="profile-actions">
+    <a class="profile-actions__primary" href="mailto:{{ site.author.email }}">Get in touch <span aria-hidden="true">↗</span></a>
+    <a href="{{ '/publications/' | relative_url }}">Publications</a>
+    <a href="{{ '/cv/' | relative_url }}">View CV</a>
+  </div>
+</div>
 
-Yaofeng Cheng is currently an engineer at the Zhejiang Humanoid Robot Innovation Center and a postdoctoral researcher at Zhejiang University. He received his Ph.D. degree from the School of Mechatronics Engineering at Harbin Institute of Technology, where he conducted research at the State Key Laboratory of Robotics and System. He received his B.Eng. degree from the School of Mechatronics Engineering at Wuhan University of Technology. During his Ph.D. studies, he was sponsored by the China Scholarship Council (CSC) to conduct a one-year research exchange at the University of Liverpool, United Kingdom.
+## Research interests
 
-His research focuses on transparent object perception and robotic manipulation, including depth recovery for transparent objects, point-cloud–based 3D shape estimation, 6-DoF grasp generation guided by spatial geometry, and task-oriented grasping. He has also worked on neural network model pruning. His current research interests include transparent sensing, robotic manipulation and machine learning.
+<div class="research-grid">
+  <div class="research-area">
+    <h3>Transparent perception</h3>
+    <p>Recovering reliable depth and geometry for objects that challenge conventional RGB-D sensing.</p>
+  </div>
+  <div class="research-area">
+    <h3>Geometry-aware grasping</h3>
+    <p>Using point-cloud completion and 3D shape features to generate executable 6-DoF grasps.</p>
+  </div>
+  <div class="research-area">
+    <h3>Task-oriented manipulation</h3>
+    <p>Combining intuitive physics and learned models to choose grasps suited to the task.</p>
+  </div>
+</div>
 
-You can find more about his research interests and ongoing projects on his [GitHub page](https://github.com/ChengYaofeng).
+## Selected publications
 
-# Seleted Publications
+{% assign selected_papers = site.publications | where: 'selected', true | sort: 'date' | reverse %}
+{% for paper in selected_papers %}
+  {% include publication-card.html paper=paper %}
+{% endfor %}
 
-### [PCF-Grasp: Converting Point Completion to Geometry Feature to Enhance 6-DoF Grasp](https://ieeexplore.ieee.org/document/11242157)
+[View all publications →]({{ '/publications/' | relative_url }})
 
-**Yaofeng Cheng**, Fusheng Zha, Wei Guo, Pengfei Wang, Chao Zeng, Lining Sun*, Chenguang Yang*
+## Background
 
-IEEE Transactions on Systems, Man, and Cybernetics: Systems, 2025.11.12
+I received my Ph.D. in Mechatronics Engineering from **Harbin Institute of Technology**, conducting research at the State Key Laboratory of Robotics and System under the supervision of Fusheng Zha. During my Ph.D., I undertook a CSC-supported research exchange at the **University of Liverpool** with Chenguang Yang. I received my B.Eng. from **Wuhan University of Technology**.
 
-### [A2G: Leveraging Intuitive Physics for Force-Efficient Robotic Grasping](https://ieeexplore.ieee.org/abstract/document/10531637)
-
-**Yaofeng Cheng**, Shengkai Liu, Fusheng Zha*, Wei Guo, Haoyu Du, Pengfei Wang, Zhenshan Bing
-
-IEEE Robotics and Automation Letters, 2024.5.16
-
-### [Rethinking Transparent Object Grasping: Depth Completion with Monocular Depth Estimation and Instance Mask](https://arxiv.org/abs/2508.02507)
-
-**Yaofeng Cheng**, Xinkai Gao, Sen Zhang, Chao Zeng, Fusheng Zha, Lining Sun, Chenguang Yang
-
-IEEE Robotics and Automation Letters, 2026.3.13
-
-### [Learning effective pruning at initialization from iterative pruning](https://arxiv.org/abs/2408.14757)
-
-Shengkai Liu*, **Yaofeng Cheng*(Equal Contribution)**, Fusheng Zha, Wei Guo, Lining Sun, Zhenshan Bing, Chenguang Yang
-
-Arxiv, 2024.8.27
-
-# Personal Education
-
-* Postdoctoral Researcher, Zhejiang University, China, *2026 – Present*, Supervisor: Yue Wang
-* Ph.D. in Mechatronics Engineering, Harbin Institute of Technology, China,  *2020 – 2026* , Supervisor: Fusheng Zha
-* Joint Ph.D. Training Program, University of Liverpool, United Kingdom,  *2024 – 2025* , Supervisor: Chenguang Yang
-* B.Eng. in Mechatronics Engineering, Wuhan University of Technology, China, *2016 – 2020*
+[Education and research experience →]({{ '/cv/' | relative_url }})

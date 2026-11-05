@@ -1,11 +1,15 @@
 ---
 title: "Learning effective pruning at initialization from iterative pruning"
 collection: publications
-category: manuscripts
+category: preprints
 permalink: /publication/AutoS_NIPS
-excerpt: 'model pruning at initialization'
-date: 2024.8.27
-venue: ''
+excerpt: 'Learning pruning-at-initialization scores from the surviving subnetworks of iterative pruning.'
+date: 2024-08-27
+short_title: AutoSparse
+authors: 'Shengkai Liu†, **Yaofeng Cheng†**, Fusheng Zha, Wei Guo, Lining Sun, Zhenshan Bing, Chenguang Yang'
+author_note: '† Equal contribution.'
+venue: 'arXiv preprint'
+codeurl: 'https://github.com/ChengYaofeng/AutoSparse'
 paperurl: 'https://arxiv.org/abs/2408.14757'
 citation: ''
 ---

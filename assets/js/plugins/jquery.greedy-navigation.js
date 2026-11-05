@@ -6,7 +6,7 @@
 */
 
 var $nav = $('#site-nav');
-var $btn = $('#site-nav button');
+var $btn = $nav.children('button.nav-toggle');
 var $vlinks = $('#site-nav .visible-links');
 var $vlinks_persist_tail = $vlinks.children("*.persist.tail");
 var $hlinks = $('#site-nav .hidden-links');
@@ -27,10 +27,9 @@ function updateNav() {
       // Move item to the hidden list
       $vlinks.children("*:not(.persist)").last().prependTo($hlinks);
 
-      availableSpace = $btn.hasClass("hidden") ? $nav.width() : $nav.width() - $btn.width() - 30;
-
-      // Show the dropdown btn
+      // Reserve the dropdown's space before deciding whether another link fits.
       $btn.removeClass("hidden");
+      availableSpace = $nav.width() - $btn.width() - 30;
     }
 
     // The visible list is not overflowing
@@ -50,7 +49,7 @@ function updateNav() {
     // Hide the dropdown btn if hidden list is empty
     if (breaks.length < 1) {
       $btn.addClass('hidden');
-      $btn.removeClass('close');
+      $btn.removeClass('close').attr('aria-expanded', 'false');
       $hlinks.addClass('hidden');
     }
   }
@@ -58,14 +57,8 @@ function updateNav() {
   // Keep counter updated
   $btn.attr("count", breaks.length);
 
-  // update masthead height and the body/sidebar top padding
-  var mastheadHeight = $('.masthead').height();
-  $('body').css('padding-top', mastheadHeight + 'px');
-  if ($(".author__urls-wrapper button").is(":visible")) {
-    $(".sidebar").css("padding-top", "");
-  } else {
-    $(".sidebar").css("padding-top", mastheadHeight + "px");
-  }
+  // Match the body offset to the actual masthead height after wrapping.
+  $('body').css('padding-top', $('.masthead').height() + 'px');
 
 }
 
@@ -74,13 +67,20 @@ function updateNav() {
 $(window).on('resize', function () {
   updateNav();
 });
-screen.orientation.addEventListener("change", function () {
-  updateNav();
-});
+if (screen.orientation && screen.orientation.addEventListener) {
+  screen.orientation.addEventListener("change", updateNav);
+}
 
 $btn.on('click', function () {
   $hlinks.toggleClass('hidden');
-  $(this).toggleClass('close');
+  $(this).toggleClass('close').attr('aria-expanded', String(!$hlinks.hasClass('hidden')));
 });
 
 updateNav();
+// Keyboard users can close the overflow menu and return to its trigger.
+$(document).on('keydown', function (event) {
+  if (event.key === 'Escape' && !$hlinks.hasClass('hidden')) {
+    $hlinks.addClass('hidden');
+    $btn.removeClass('close').attr('aria-expanded', 'false').trigger('focus');
+  }
+});

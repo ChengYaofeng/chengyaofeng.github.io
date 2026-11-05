@@ -3,8 +3,12 @@ title: "PCF-Grasp: Converting Point Completion to Geometry Feature to Enhance 6-
 collection: publications
 category: manuscripts
 permalink: /publication/pcfgrasp
-excerpt: '6-DoF Grasping'
-date: 2025.11.12
+excerpt: 'Using completed point clouds as geometric features to improve 6-DoF grasp generation from partial observations.'
+date: 2025-11-12
+selected: true
+short_title: PCF-Grasp
+authors: '**Yaofeng Cheng**, Fusheng Zha, Wei Guo, Pengfei Wang, Chao Zeng, Lining Sun\*, Chenguang Yang\*'
+codeurl: 'https://github.com/ChengYaofeng/PCF-Grasp'
 venue: 'IEEE Transactions on Systems, Man, and Cybernetics: Systems'
 paperurl: 'https://ieeexplore.ieee.org/document/11242157'
 citation: ''

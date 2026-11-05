@@ -2,35 +2,21 @@
 layout: archive
 title: "Publications"
 permalink: /publications/
+description: "Research publications by Yaofeng Cheng on transparent object perception, robotic grasping, 3D measurement and neural network pruning."
 author_profile: true
 ---
-
+<p class="section-intro">Research in robotic perception and manipulation, 3D measurement and efficient machine learning. <strong>My name is highlighted</strong> in each author list.</p>
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+<p><a href="{{ site.author.googlescholar }}">Google Scholar profile <span aria-hidden="true">↗</span></a></p>
 {% endif %}
 
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
+{% assign papers_by_date = site.publications | sort: 'date' | reverse %}
+{% for category in site.publication_category %}
+  {% assign category_papers = papers_by_date | where: 'category', category[0] %}
+  {% if category_papers.size > 0 %}
+    <h2>{{ category[1].title }}</h2>
+    {% for paper in category_papers %}
+      {% include publication-card.html paper=paper %}
     {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+  {% endif %}
+{% endfor %}

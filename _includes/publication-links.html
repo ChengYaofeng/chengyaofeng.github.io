@@ -1,0 +1,9 @@
+{% assign paper = include.paper %}
+<div class="publication-links" aria-label="Publication resources">
+  {% if paper.paperurl and paper.paperurl != '' %}<a href="{{ paper.paperurl | escape }}">Paper</a>{% endif %}
+  {% if paper.arxivurl and paper.arxivurl != '' %}<a href="{{ paper.arxivurl | escape }}">arXiv</a>{% endif %}
+  {% if paper.codeurl and paper.codeurl != '' %}<a href="{{ paper.codeurl | escape }}">Code</a>{% endif %}
+  {% if paper.projecturl and paper.projecturl != '' %}<a href="{{ paper.projecturl | escape }}">Project &amp; videos</a>{% endif %}
+  {% if paper.slidesurl and paper.slidesurl != '' %}<a href="{{ paper.slidesurl | escape }}">Slides</a>{% endif %}
+  {% if paper.bibtexurl and paper.bibtexurl != '' %}<a href="{{ paper.bibtexurl | escape }}">BibTeX</a>{% endif %}
+</div>

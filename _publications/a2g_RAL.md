@@ -3,8 +3,11 @@ title: "A2G: Leveraging Intuitive Physics for Force-Efficient Robotic Grasping"
 collection: publications
 category: manuscripts
 permalink: /publication/a2g_RAL
-excerpt: 'task-oriented grasping'
-date: 2024.5.16
+excerpt: 'Learning intuitive physics from point clouds to choose force-efficient grasps for object manipulation.'
+date: 2024-05-16
+selected: true
+short_title: A2G
+authors: '**Yaofeng Cheng**, Shengkai Liu, Fusheng Zha\*, Wei Guo, Haoyu Du, Pengfei Wang, Zhenshan Bing'
 venue: 'IEEE Robotics and Automation Letters'
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/10531637'
 citation: 'Y. Cheng et al., "A2G: Leveraging Intuitive Physics for Force-Efficient Robotic Grasping," in IEEE Robotics and Automation Letters, vol. 9, no. 7, pp. 6376-6383, July 2024, doi: 10.1109/LRA.2024.3401675.'
